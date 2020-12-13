@@ -1,7 +1,9 @@
 package view;
 
-import game.Game;
 import javax.swing.*;
+
+import model.Game;
+
 import java.awt.*;
 
 public class ViewSimpleGame implements Observer{

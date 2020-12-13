@@ -1,6 +1,6 @@
 package view;
 
-import game.Game;
+import model.Game;
 
 public interface Observer {
 

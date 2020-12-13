@@ -127,4 +127,8 @@ public abstract class Strategie {
 				break;
 		}
 	}
+	
+	public void setPanel(PanelPacmanGame panel) {
+		this.panel = panel;
+	}
 }

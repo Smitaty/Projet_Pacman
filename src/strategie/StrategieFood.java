@@ -30,25 +30,25 @@ public class StrategieFood extends Strategie{
 		for(AgentAction coup : coups) {
 			switch(coup.get_direction()) {
 			case AgentAction.NORTH:
-				if(panel.getMaze().isFood(pos.getX(), pos.getY()-1)) {
+				if(panel.getMaze().isFood(pos.getX(), pos.getY()-1) || panel.getMaze().isCapsule(pos.getX(), pos.getY()-1)) {
 					coupForFood.add(coup);
 					++cptFood;
 				}
 				break;
 			case AgentAction.SOUTH:
-				if(panel.getMaze().isFood(pos.getX(), pos.getY()+1)) {
+				if(panel.getMaze().isFood(pos.getX(), pos.getY()+1) || panel.getMaze().isCapsule(pos.getX(), pos.getY()+1)) {
 					coupForFood.add(coup);
 					++cptFood;
 				}
 				break;
 			case AgentAction.EAST:
-				if(panel.getMaze().isFood(pos.getX()+1, pos.getY())) {
+				if(panel.getMaze().isFood(pos.getX()+1, pos.getY()) || panel.getMaze().isCapsule(pos.getX()+1, pos.getY())) {
 					coupForFood.add(coup);
 					++cptFood;
 				}
 				break;
 			case AgentAction.WEST:
-				if(panel.getMaze().isFood(pos.getX()-1, pos.getY())) {
+				if(panel.getMaze().isFood(pos.getX()-1, pos.getY()) || panel.getMaze().isCapsule(pos.getX()-1, pos.getY())) {
 					coupForFood.add(coup);
 					++cptFood;
 				}

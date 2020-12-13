@@ -37,8 +37,11 @@ public class Maze implements Serializable, Cloneable {
 	 */
 	private ArrayList<PositionAgent> pacman_start;
 	private ArrayList<PositionAgent> ghosts_start;
+	
+	private String filename;
 
 	public Maze(String filename) throws Exception {
+		this.filename = filename;
 		try {
 			System.out.println("Layout file is " + filename);
 			// Lecture du fichier pour determiner la taille du labyrinthe
@@ -215,6 +218,10 @@ public class Maze implements Serializable, Cloneable {
 
 	public void setGhosts_start(ArrayList<PositionAgent> ghosts_start) {
 		this.ghosts_start = ghosts_start;
+	}
+	
+	public String getFilename() {
+		return filename;
 	}
 
 	public String toString() {
